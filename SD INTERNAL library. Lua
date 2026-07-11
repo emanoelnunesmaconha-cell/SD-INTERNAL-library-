@@ -384,3 +384,30 @@ function SD_Lib:CreateMain(config)
 end
 
 return SD_Lib
+        function page:AddDropdown(title, list, callback)
+            local Element = CreateInstance("Frame", {
+                Parent = PageFrame,
+                BackgroundColor3 = Color3.fromRGB(22, 22, 22),
+                BorderSizePixel = 0,
+                Size = UDim2.new(1, 0, 0, 40),
+                ClipsDescendants = true
+            })
+            CreateInstance("UICorner", { Parent = Element, CornerRadius = UDim.new(0, 6) })
+            
+            local TextLabel = CreateInstance("TextLabel", {
+                Parent = Element,
+                BackgroundTransparency = 1,
+                Position = UDim2.new(0, 14, 0, 0),
+                Size = UDim2.new(1, -40, 1, 0),
+                Font = Enum.Font.GothamMedium,
+                Text = title,
+                TextColor3 = Color3.fromRGB(180, 180, 180),
+                TextSize = 13,
+                TextXAlignment = Enum.TextXAlignment.Left,
+            })
+
+            -- Aqui você pode criar a lógica de clique para abrir a lista
+            -- Para simplicidade agora, você pode apenas expandir o frame ou criar botões internos.
+            -- Quer que eu monte a lógica completa de expansão para você?
+        end
+
